@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lahore Live | Weather in Motion</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <p>THE WEB IN REAL TIME</p>
+    <h1>Lahore Live</h1>
+    <p>A webpage that changes with Lahore’s weather.</p>
+  </header>
+  <main>
+    <section class="weather-panel" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Lahore, Pakistan</h2>
+      <p id="status" role="status">
+        Waiting for weather data…
+      </p>
+      <div class="weather-grid">
+        <article class="weather-card">
+          <h3>Temperature</h3>
+          <p id="temperature">—</p>
+        </article>
+        <article class="weather-card">
+          <h3>Cloud Cover</h3>
+          <p id="cloud-cover">—</p>
+        </article>
+        <article class="weather-card">
+          <h3>Wind Speed</h3>
+          <p id="wind-speed">—</p>
+        </article>
+      </div>
+      <button id="refresh-button" type="button">
+        Refresh Weather
+      </button>
+      <p id="updated-time">Weather update time will appear here.</p>
+    </section>
+    <section class="visual-panel" aria-labelledby="visual-heading">
+      <h2 id="visual-heading">Feel the Temperature</h2>
+      <div class="temperature-track" aria-hidden="true">
+        <div id="temperature-bar"></div>
+      </div>
+      <p id="weather-message">
+        The colours and temperature bar will change when data loads.
+      </p>
+    </section>
+    <section class="about">
+      <h2>How It Works</h2>
+      <p>
+        This webpage requests current weather data from Open-Meteo.
+        JavaScript uses the response to update the weather readings,
+        background colours, and temperature bar.
+        Click Refresh Weather to request the latest available data.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>
+      Weather data:
+      <a href="https://open-meteo.com/">Open-Meteo</a>
+    </p>
+    <p>CCT360 · The Web in Real Time</p>
+  </footer>
+</body>
+</html>
